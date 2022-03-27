@@ -1,0 +1,99 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* Colors */
+:root{
+    --primary: #1a253f;
+    --dark: #151A33;
+    --secondary: #2b55cc;
+    --info: #4d79f6;
+    --ternary: #848db3;
+    --pure: #eff2f9;
+    --fade: #7081b9;
+    --mild: #8997bd;
+    --footer: #212A4A;
+    --black: #060b1b;
+    --twitter: #4ac7ec;
+    --dribbble: #ff5da0;
+    --success: #1ecab8;
+    --danger: #f1646c;
+    --dark-blue: #28365f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;;
+}
+
+header{
+    background-color: #eaeaea;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+ul{
+    padding: 0;
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 0 1.25rem;
+}
+
+.navbar li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-toggle{
+    display: none;
+    position: absolute;
+    top: 0.3rem;
+    right: 1rem;
+}
+
+.open{
+    height: 100vh;
+}
+
+.hidden{
+    display: none;
+}
+
+@media all and (max-width: 720px){
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav{
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: 250ms height ease-in-out;
+    }
+    .navbar li{
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    .navbar li a{
+        font-size: 1.1rem;
+    }
+    .nav-toggle{
+        display: block;
+    }
+}
